@@ -1,20 +1,17 @@
 {
   "name": "kingdee-k3cloud-mcp-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "金蝶云星空企业版服务",
   "main": "dist/index.js",
     "scripts": {
-    "build": "tsc",
-    "dev": "tsx watch src/stdio.ts",
-    "dev:http": "tsx watch src/http.ts",
-    "start:stdio": "node dist/stdio.js",
-    "start:http": "node dist/http.js",
-    "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\"",
-    "clean": "rm -rf dist/",
-    "check": "npm run lint && npm run format:check && npm run build"
+      "start": "tsx src/index.ts",
+      "build": "tsc",
+      "dev": "tsx watch src/index.ts",
+      "lint": "eslint src/",
+      "lint:fix": "eslint src/ --fix",
+      "format": "prettier --write \"src/**/*.ts\"",
+      "format:check": "prettier --check \"src/**/*.ts\"",
+      "clean": "rm -rf dist/"
   },
   "keywords": [
     "mcp",
@@ -26,7 +23,7 @@
     "金蝶",
     "金蝶云星空"
   ],
-  "author": "",
+  "author": "janne-zhang",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
