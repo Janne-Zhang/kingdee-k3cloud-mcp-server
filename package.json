@@ -1,17 +1,23 @@
 {
-  "name": "kingdee-k3cloud-mcp-server",
-  "version": "0.0.2",
-  "description": "金蝶云星空企业版服务",
-  "main": "dist/index.js",
-    "scripts": {
-      "start": "tsx src/index.ts",
-      "build": "tsc",
-      "dev": "tsx watch src/index.ts",
-      "lint": "eslint src/",
-      "lint:fix": "eslint src/ --fix",
-      "format": "prettier --write \"src/**/*.ts\"",
-      "format:check": "prettier --check \"src/**/*.ts\"",
-      "clean": "rm -rf dist/"
+  "name": "kingdee-k3cloud-dev-mcp-server",
+  "version": "1.0.7",
+  "description": "金蝶云星空企业版开发服务",
+  "bin": {
+    "kingdee-k3cloud-dev-mcp-server": "./dist/index.js"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "clean": "rmdir /s /q dist"
   },
   "keywords": [
     "mcp",
@@ -21,24 +27,26 @@
     "kingdee",
     "k3cloud",
     "金蝶",
-    "金蝶云星空"
+    "金蝶云星空",
+    "二次开发"
   ],
   "author": "janne-zhang",
   "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0",
-    "zod": "^4.3.6",
-    "express": "^5.2.1"
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "express": "^4.21.2",
+    "zod": "^3.23.8",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.6.0",
-    "typescript": "^6.0.3",
-    "eslint": "^10.2.1",
-    "@eslint/js": "^10.0.1",
-    "typescript-eslint": "^8.59.0",
-    "prettier": "^3.8.3",
-    "tsx": "^4.19.0"
+    "@eslint/js": "^11.12.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "eslint": "^9.19.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.18.0"
   },
   "engines": {
     "node": ">=20.0.0"
